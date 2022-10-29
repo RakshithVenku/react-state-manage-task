@@ -1,9 +1,12 @@
 import './App.css';
+// import SampleForm from './components/SampleForm';
+import MainComponent from './components/MainComponent'
 
 function App() {
   return (
-    <div className="App">
-        <h2>React App</h2>
+    <div>
+       <MainComponent />
+        {/* <SampleForm /> */}
     </div>
   );
 }

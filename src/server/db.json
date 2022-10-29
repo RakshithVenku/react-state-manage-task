@@ -1,0 +1,16 @@
+{
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment"
+    },
+    {
+      "body": "Hello World",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "body": "Bonjour!!"
+    }
+  ]
+}
