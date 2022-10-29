@@ -11,7 +11,7 @@ export const addComment = (body) => async (dispatch) => {
 };
 
 export const removeComment = (id) => async (dispatch) => {
-//   const data = await request("DELETE", `http://localhost:3000/comments/${id}`);
+  const data = await request("DELETE", `http://localhost:3000/comments/${id}`);
   dispatch({ type: "REMOVE_COMMENT",payload:id});
 };
 
