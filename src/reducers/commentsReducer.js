@@ -2,6 +2,7 @@
 const intialState = {
     comments: [],
     comment: {},
+    commentById: {}
   };
   
 const commentsReducer = (state = intialState, action) => {
@@ -20,6 +21,8 @@ const commentsReducer = (state = intialState, action) => {
         return { ...state, comments: [...result, action.payload.data] };
       case "GET_COMMENT":
         return { ...state, comment: action.payload };
+      case "GET_COMMENT_BY_ID":
+        return { ...state, commentById: action.payload };
       default:
         return state;
     }

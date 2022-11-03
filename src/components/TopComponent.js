@@ -1,11 +1,11 @@
 import React,{useState, useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Box, Typography, FormControl,MenuItem,Select, Card, CardContent, TextField, CardActions, Button } from "@mui/material";
-import { updateComment, getComment } from "../actions/CommentsAction";
+import { updateComment, getCommentById } from "../actions/CommentsAction";
 
 const TopComponent = ({comments}) => {
     const dispatch = useDispatch()
-    const selectedComment = useSelector((state) => state?.allComments?.comment);
+    const selectedComment = useSelector((state) => state?.allComments?.commentById);
 
     const [selectedId, setSelectedId] = useState("")
     const [comment, setComment] = useState(selectedComment?.body)
@@ -18,7 +18,7 @@ const TopComponent = ({comments}) => {
     
     const handleChange = (e) => {
         setSelectedId(e.target.value)
-        dispatch(getComment(e.target.value))
+        dispatch(getCommentById(e.target.value))
         console.log('e.value',e.target.value)   
     }
 

@@ -23,3 +23,9 @@ export const getComment = (id) => async (dispatch) => {
   const data = await request("GET", `http://localhost:3000/comments/${id}`);
   dispatch({ type: "GET_COMMENT",payload:data});
 };
+
+//for TopComponent
+export const getCommentById = (id) => async (dispatch) => {
+  const data = await request("GET", `http://localhost:3000/comments/${id}`);
+  dispatch({ type: "GET_COMMENT_BY_ID",payload:data});
+};
